@@ -1,17 +1,17 @@
 import random
 
-// generate random numbers
+# generate random numbers
 def random_number_fun(min, max):
     """
     Random integer.
     """
     return random.randint(min, max)
 
-//generate random mathematical symbols 
+# generate random mathematical symbols 
 def random_math_process():
     return random.choice(['+', '-', '*'])
 
-//out put of the two numbers after applying the mathematical calculation
+# out put of the two numbers after applying the mathematical calculation
 def output_fun(n1, n2, math_process):
     print_ = f"{n1} {o} {n2}"
     if math_process == '+': output = n1 + n2
