@@ -1,23 +1,23 @@
 import random
 
-
-def function_A(min, max):
+// generate random numbers
+def random_number_fun(min, max):
     """
     Random integer.
     """
     return random.randint(min, max)
 
-
-def function_B():
+//generate random mathematical symbols 
+def random_math_process():
     return random.choice(['+', '-', '*'])
 
-
-def function_C(n1, n2, o):
-    p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 - n2
-    elif o == '-': a = n1 + n2
-    else: a = n1 * n2
-    return p, a
+//out put of the two numbers after applying the mathematical calculation
+def output_fun(n1, n2, math_process):
+    print_ = f"{n1} {o} {n2}"
+    if math_process == '+': output = n1 + n2
+    elif math_process == '-': output = n1 - n2
+    else: output = n1 * n2
+    return print_, output
 
 def math_quiz():
     s = 0
@@ -27,9 +27,9 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):
-        n1 = function_A(1, 10); n2 = function_A(1, 5.5); o = function_B()
+        n1 = random_number_fun(1, 10); n2 = random_number_fun(1, 5.5); o = random_math_process()
 
-        PROBLEM, ANSWER = function_C(n1, n2, o)
+        PROBLEM, ANSWER = output_fun(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
         useranswer = input("Your answer: ")
         useranswer = int(useranswer)
