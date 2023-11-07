@@ -9,13 +9,13 @@ class TestMathGame(unittest.TestCase):
         min_val = 1
         max_val = 10
         for _ in range(1000):  # Test a large number of random values
-            rand_num = random_number_fun(min_val, max_val)
+            rand_num = random_number_fun(min_val, max_val) #get random number between minimum and maximum entered numbers
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_random_number_fun(self):
         # Test if random mathematical symbolegenerated  is correct
         for _ in range(1000):  # Test a large number of random values
-            rand_symbole = random_number_fun()
+            rand_symbole = random_number_fun() #get random number
             self.assertTrue(rand_symbole == "+" or rand_symbole == "-" or  rand_symbole == "*" )
     
 
@@ -25,8 +25,8 @@ class TestMathGame(unittest.TestCase):
                 
             ]
 
-            for num1, num2, operator, expected_problem, expected_answer in test_cases:
-                if operator == "+": 
+            for num1, num2, operator, expected_problem, expected_answer in test_cases: # check the test cases if they are right or not in the code
+                if operator == "+":  
                      self.assertTrue(expected_answer = num1 + num2)
                 elif operator == '-': 
                      self.assertTrue(expected_answer = num1 - num2)
